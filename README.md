@@ -239,6 +239,16 @@ Deletes specified schema
 | ------------------------- | ------- | ----------------------------------- |
 | `schemaId`                | number  | ID of sechema                       |
 
+#### DELETE /service/delete/:name
+
+Deletes specified service including all schemas registered for that service
+
+##### Request params
+
+| Property                  | Type    | Comments                            |
+| ------------------------- | ------- | ----------------------------------- |
+| `name`                    | string  | name of service                     |
+
 
 #### GET /persisted_query
 

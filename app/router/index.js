@@ -5,6 +5,7 @@ const { asyncWrap } = require('../helpers/middleware');
 
 const assets = require('./assets');
 const schema = require('./schema');
+const service = require('./service');
 const persistedQuery = require('./persisted-queries');
 
 router.use(
@@ -27,5 +28,7 @@ router.post('/schema/diff', asyncWrap(schema.diff));
 
 router.delete('/schema/delete/:schemaId', asyncWrap(schema.delete));
 router.post('/schema/validate', asyncWrap(schema.validate));
+
+router.delete('/service/delete/:name', asyncWrap(service.delete));
 
 module.exports = router;
